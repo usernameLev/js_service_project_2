@@ -1,9 +1,10 @@
 export const modals = () => {
+  let btnPressed = false;
   const bindModal = ({
     triggerSelector,
     modalSelector,
     closeSelector,
-    closeClickOverlay = true,
+    destroy = false,
   }) => {
     const triggers = document.querySelectorAll(triggerSelector),
       modal = document.querySelector(modalSelector),
@@ -28,8 +29,15 @@ export const modals = () => {
           e.preventDefault();
         }
 
+        btnPressed = true;
+
+        if (destroy) {
+          trigger.remove();
+        }
+
         windows.forEach((window) => {
           window.style.display = 'none';
+          window.classList.add('animated', 'fadeIn');
         });
 
         modal.style.display = 'block';
@@ -65,7 +73,7 @@ export const modals = () => {
     });
 
     modal.addEventListener('click', (e) => {
-      if (e.target === modal && closeClickOverlay) {
+      if (e.target === modal) {
         windows.forEach((window) => {
           window.style.display = 'none';
         });
@@ -81,7 +89,7 @@ export const modals = () => {
     const modalWindows = document.querySelectorAll('[data-modal]');
     setTimeout(() => {
       let display;
-      
+
       modalWindows.forEach((window) => {
         if (getComputedStyle(window).display != 'none') {
           display = 'block';
@@ -92,6 +100,9 @@ export const modals = () => {
         document.querySelector(selector).style.display = 'block';
         document.body.style.overflow = 'hidden';
         document.querySelector('#modalFocus').focus();
+
+        const scroll = calcScroll();
+        document.body.style.marginRight = `${scroll}px`;
       }
     }, time);
   };
@@ -111,7 +122,7 @@ export const modals = () => {
   const popupCalcProfileButtons = document.querySelectorAll(
     '.popup_calc_profile_button',
   );
-  const endModlaFocusCalc = () => {
+  const endModalFocusCalc = () => {
     popupCalcProfileButtons.forEach((popupCalcProfileButton) => {
       popupCalcProfileButton.addEventListener('click', () => {
         setTimeout(() => {
@@ -120,7 +131,7 @@ export const modals = () => {
       });
     });
   };
-  endModlaFocusCalc();
+  endModalFocusCalc();
 
   const calcScroll = () => {
     const div = document.createElement('div');
@@ -137,6 +148,17 @@ export const modals = () => {
     return scrollWidth;
   };
 
+  const openByScroll = (selector) => {
+    window.addEventListener('scroll', () => {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      if (!btnPressed && Math.ceil(scrolled) === scrollable) {
+        document.querySelector(selector).click();
+      }
+    });
+  };
+
   bindModal({
     triggerSelector: '.button-design',
     modalSelector: '.popup-design',
@@ -149,8 +171,17 @@ export const modals = () => {
     closeSelector: '.popup-consultation .popup-close',
   });
 
-  showModalByTime({
-    selector: '.popup-consultation',
-    time: 1000,
+  bindModal({
+    triggerSelector: '.fixed-gift',
+    modalSelector: '.popup-gift',
+    closeSelector: '.popup-gift .popup-close',
+    destroy: true,
   });
+
+  openByScroll('.fixed-gift');
+
+  // showModalByTime({
+  //   selector: '.popup-consultation',
+  //   time: 1000,
+  // });
 };
