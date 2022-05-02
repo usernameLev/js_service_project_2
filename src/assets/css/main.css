@@ -1728,12 +1728,9 @@ h4 {
 
 /* focus */
 .button-order:focus,
-.fixed-gift:focus,
 .header-menu-catalog li:focus-within,
 .file_upload:focus-within,
 .button-styles:focus,
-.main-prev-btn:focus,
-.main-next-btn:focus,
 .input-wrapper input:focus,
 .portfolio-block a:focus img,
 .gift h3:focus,
@@ -1744,8 +1741,7 @@ h4 {
   color: rgb(106, 200, 255);
 }
 
-.header-menu li a,
-.input-wrapper input {
+.header-menu li a {
   border: 1px solid transparent;
   outline: none;
 }
@@ -1764,15 +1760,15 @@ h4 {
   color: rgba(170, 38, 183, 100%);
 }
 
-.promocode:focus,
-.portfolio-menu button:focus,
-.accordion-heading button:focus {
+input:focus {
   border: 1px solid rgba(170, 38, 183, 100%);
 }
+button:focus {
+  border: 2px solid rgba(170, 38, 183, 100%);
+}
 
-.portfolio-menu button,
-.accordion-heading button {
-  border: 1px solid transparent;
+button {
+  border: 2px solid transparent;
   background: transparent;
   padding: 0;
 }

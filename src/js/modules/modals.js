@@ -63,9 +63,7 @@ export const modals = () => {
     });
 
     close.addEventListener('click', () => {
-      windows.forEach((window) => {
-        window.style.display = 'none';
-      });
+      windows.forEach((window) => (window.style.display = 'none'));
 
       closeModal();
       document.body.style.marginRight = `0px`;
@@ -99,39 +97,12 @@ export const modals = () => {
       if (!display) {
         document.querySelector(selector).style.display = 'block';
         document.body.style.overflow = 'hidden';
-        document.querySelector('#modalFocus').focus();
 
         const scroll = calcScroll();
         document.body.style.marginRight = `${scroll}px`;
       }
     }, time);
   };
-
-  const popupCalcBtns = document.querySelectorAll('.popup_calc_btn');
-  const modalFocusCalc = () => {
-    popupCalcBtns.forEach((popupCalcBtn) => {
-      popupCalcBtn.addEventListener('click', () => {
-        setTimeout(() => {
-          document.querySelector('#width').focus();
-        }, 100);
-      });
-    });
-  };
-  modalFocusCalc();
-
-  const popupCalcProfileButtons = document.querySelectorAll(
-    '.popup_calc_profile_button',
-  );
-  const endModalFocusCalc = () => {
-    popupCalcProfileButtons.forEach((popupCalcProfileButton) => {
-      popupCalcProfileButton.addEventListener('click', () => {
-        setTimeout(() => {
-          document.querySelector('#endModlaFocusCalc').focus();
-        }, 100);
-      });
-    });
-  };
-  endModalFocusCalc();
 
   const calcScroll = () => {
     const div = document.createElement('div');
