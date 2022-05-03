@@ -36,5 +36,3 @@ export const showMoreStyle = ({ trigger, wrapper }) => {
     });
   };
 };
-
-// hello
