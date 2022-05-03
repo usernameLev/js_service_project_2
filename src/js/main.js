@@ -33,6 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   showMoreStyle({
     trigger: '.button-styles',
-    styles: '.styles-2',
+    wrapper: '#styles .row',
   });
 });
