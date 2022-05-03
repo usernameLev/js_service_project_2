@@ -5,8 +5,6 @@ export const forms = () => {
     inputs = document.querySelectorAll('input'),
     uploads = document.querySelectorAll('[name="upload"]');
 
-  // checkNumInputs(`input[name='user_phone']`);
-
   const message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с Вами свяжемся',
