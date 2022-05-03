@@ -36,4 +36,3 @@ export const showMoreStyle = ({ trigger, wrapper }) => {
     });
   };
 };
-// hello, I'll delete this comment a bit later. Thanks for watching :-)
