@@ -5,11 +5,7 @@ const webpack = require('webpack-stream');
 const browsersync = require('browser-sync');
 
 // const dist = "./dist/";
-<<<<<<< HEAD
 const dist = "../../js-petre4enko-test-2";
-=======
-const dist = 'c:/OpenServer/domains/js-petre4enko-test-2/';
->>>>>>> f1b401204313dd38f1248d937678d504cce2a241
 
 gulp.task('copy-html', () => {
   return gulp
