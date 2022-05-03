@@ -1,4 +1,4 @@
-import { modals, sliders } from './modules';
+import { modals, sliders, forms } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -11,9 +11,11 @@ window.addEventListener('DOMContentLoaded', () => {
     prev: '.main-prev-btn',
     next: '.main-next-btn',
   });
-  
+
   sliders({
     slides: '.main-slider-item',
     dir: 'vertical',
   });
+
+  forms();
 });
