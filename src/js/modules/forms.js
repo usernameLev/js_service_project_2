@@ -46,7 +46,7 @@ export const forms = () => {
         fileType = file.name.split('.')[1];
 
       fileName.length > 6 ? (dots = '...') : (dots = '.');
-      const name = `${fileName.substring(0, 6)} ${dots} ${fileType}`;
+      const name = `${fileName.substring(0, 6)}${dots}${fileType}`;
       upload.previousElementSibling.textContent = name;
     });
   });
