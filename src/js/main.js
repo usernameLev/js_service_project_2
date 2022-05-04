@@ -6,6 +6,7 @@ import {
   checkTextInputs,
   showMoreStyle,
   calc,
+  filter,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -44,4 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
     promocode: '.promocode',
     result: '.calc-price',
   });
+
+  filter();
 });

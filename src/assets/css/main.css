@@ -628,7 +628,7 @@ h4 {
   margin-top: 6rem;
   margin-bottom: 5rem;
 }
-.portfolio ul li {
+.portfolio ul button {
   font-size: 2rem;
   display: inline-block;
   padding: 1rem 2rem;
@@ -1776,4 +1776,10 @@ button {
   border: 2px solid transparent;
   background: transparent;
   padding: 0;
+}
+
+.portfolio-menu button:focus {
+  border: 1px solid #c51abb;
+  color: #c51abb;
+  border-radius: 50px;
 }
