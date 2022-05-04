@@ -5,6 +5,7 @@ import {
   mask,
   checkTextInputs,
   showMoreStyle,
+  pictureSize,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,4 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     trigger: '.button-styles',
     wrapper: '#styles .row',
   });
+
+  pictureSize('.sizes-block');
 });
