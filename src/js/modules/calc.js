@@ -5,9 +5,9 @@ export const calc = ({ size, material, options, promocode, result }) => {
     promocodeBlock = document.querySelector(promocode),
     resultlBlock = document.querySelector(result);
 
-  let sum = 0;
-
   const calcFunc = () => {
+    let sum = 0;
+
     sum = Math.round(
       +sizeBlock.value * +materialBlock.value + +optionsBlock.value,
     );
