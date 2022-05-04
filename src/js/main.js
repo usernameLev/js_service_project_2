@@ -5,6 +5,7 @@ import {
   mask,
   checkTextInputs,
   showMoreStyle,
+  calc,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -34,5 +35,13 @@ window.addEventListener('DOMContentLoaded', () => {
   showMoreStyle({
     trigger: '.button-styles',
     wrapper: '#styles .row',
+  });
+
+  calc({
+    size: '#size',
+    material: '#material',
+    options: '#options',
+    promocode: '.promocode',
+    result: '.calc-price',
   });
 });
