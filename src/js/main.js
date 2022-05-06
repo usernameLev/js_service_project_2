@@ -4,11 +4,15 @@ import {
   forms,
   mask,
   checkTextInputs,
+  showMoreStyle,
   calc,
   showMoreStyle,
   filter,
   pictureSize,
+<<<<<<< HEAD
   accordion,
+=======
+>>>>>>> 811273a82b4579fc8e96cb8d7be0a4cb1c2e817d
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +35,9 @@ window.addEventListener('DOMContentLoaded', () => {
   forms();
 
   mask('[name="phone"]');
+
+  checkTextInputs('[name="name"]');
+  checkTextInputs('[name="message"]');
 
   calc({
     size: '#size',
@@ -59,4 +66,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }); */
   // 2 solution
   accordion('.accordion-heading');
+  showMoreStyle({
+    trigger: '.button-styles',
+    wrapper: '#styles .row',
+  });
+
+  pictureSize('.sizes-block');
 });
