@@ -6,7 +6,6 @@ const postData = async (url, data) => {
     });
 
     return await res.text();
-
   } catch (error) {
     return {};
   }
@@ -21,7 +20,6 @@ const getResource = async (url) => {
     }
 
     return await res.json();
-
   } catch (error) {
     return {};
   }

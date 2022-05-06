@@ -7,6 +7,7 @@ import {
   showMoreStyle,
   calc,
   filter,
+  pictureSize,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -33,11 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
   checkTextInputs('[name="name"]');
   checkTextInputs('[name="message"]');
 
-  showMoreStyle({
-    trigger: '.button-styles',
-    wrapper: '#styles .row',
-  });
-
   calc({
     size: '#size',
     material: '#material',
@@ -47,4 +43,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   filter();
+
+  showMoreStyle({
+    trigger: '.button-styles',
+    wrapper: '#styles .row',
+  });
+
+  pictureSize('.sizes-block');
 });
