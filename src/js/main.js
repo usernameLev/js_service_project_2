@@ -7,6 +7,7 @@ import {
   calc,
   showMoreStyle,
   accordion,
+  filter,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -52,4 +53,6 @@ window.addEventListener('DOMContentLoaded', () => {
     trigger: '.button-styles',
     wrapper: '#styles .row',
   });
+
+  filter();
 });
