@@ -6,6 +6,7 @@ import {
   checkTextInputs,
   showMoreStyle,
   calc,
+  filter,
   pictureSize,
 } from './modules';
 
@@ -40,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
     promocode: '.promocode',
     result: '.calc-price',
   });
+
+  filter();
 
   showMoreStyle({
     trigger: '.button-styles',
