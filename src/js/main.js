@@ -4,6 +4,7 @@ import {
   forms,
   mask,
   checkTextInputs,
+  calc,
   showMoreStyle,
   accordion,
 } from './modules';
@@ -29,14 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   mask('[name="phone"]');
 
-  checkTextInputs('[name="name"]');
-  checkTextInputs('[name="message"]');
-
-  showMoreStyle({
-    trigger: '.button-styles',
-    wrapper: '#styles .row',
-  });
-
   /* 1 solution
   accordion({
     triggersSelector: '.accordion-heading',
@@ -44,4 +37,19 @@ window.addEventListener('DOMContentLoaded', () => {
   }); */
   // 2 solution
   accordion('.accordion-heading');
+  calc({
+    size: '#size',
+    material: '#material',
+    options: '#options',
+    promocode: '.promocode',
+    result: '.calc-price',
+  });
+
+  checkTextInputs('[name="name"]');
+  checkTextInputs('[name="message"]');
+
+  showMoreStyle({
+    trigger: '.button-styles',
+    wrapper: '#styles .row',
+  });
 });
