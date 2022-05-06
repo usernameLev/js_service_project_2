@@ -4,15 +4,11 @@ import {
   forms,
   mask,
   checkTextInputs,
-  showMoreStyle,
   calc,
   showMoreStyle,
   filter,
   pictureSize,
-<<<<<<< HEAD
   accordion,
-=======
->>>>>>> 811273a82b4579fc8e96cb8d7be0a4cb1c2e817d
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -50,14 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
   checkTextInputs('[name="name"]');
   checkTextInputs('[name="message"]');
 
-  showMoreStyle({
-    trigger: '.button-styles',
-    wrapper: '#styles .row',
-  });
-
   filter();
-
-  pictureSize('.sizes-block')
 
   /* 1 solution
   accordion({
