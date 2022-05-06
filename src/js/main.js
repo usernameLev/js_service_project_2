@@ -5,7 +5,7 @@ import {
   mask,
   checkTextInputs,
   showMoreStyle,
-  pictureSize,
+  accordion,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,5 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
     wrapper: '#styles .row',
   });
 
-  pictureSize('.sizes-block');
+  /* 1 solution
+  accordion({
+    triggersSelector: '.accordion-heading',
+    blocksSelector: '.accordion-block',
+  }); */
+  // 2 solution
+  accordion('.accordion-heading');
 });
