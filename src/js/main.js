@@ -4,7 +4,6 @@ import {
   forms,
   mask,
   checkTextInputs,
-  showMoreStyle,
   calc,
   showMoreStyle,
   filter,
@@ -47,14 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
   checkTextInputs('[name="name"]');
   checkTextInputs('[name="message"]');
 
-  showMoreStyle({
-    trigger: '.button-styles',
-    wrapper: '#styles .row',
-  });
-
   filter();
-
-  pictureSize('.sizes-block')
 
   /* 1 solution
   accordion({
