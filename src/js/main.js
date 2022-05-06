@@ -5,6 +5,7 @@ import {
   mask,
   checkTextInputs,
   showMoreStyle,
+  calc,
   pictureSize,
 } from './modules';
 
@@ -31,6 +32,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   checkTextInputs('[name="name"]');
   checkTextInputs('[name="message"]');
+
+  calc({
+    size: '#size',
+    material: '#material',
+    options: '#options',
+    promocode: '.promocode',
+    result: '.calc-price',
+  });
 
   showMoreStyle({
     trigger: '.button-styles',
