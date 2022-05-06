@@ -6,5 +6,5 @@ export { checkTextInputs } from './checkTextInputs';
 export { showMoreStyle } from './showMoreStyle';
 export { calc } from './calc';
 export { pictureSize } from './pictureSize';
-export { accordion } from './accordion';
 export { filter } from './filter';
+export { accordion } from './accordion';
