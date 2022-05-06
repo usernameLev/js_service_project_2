@@ -9,6 +9,7 @@ import {
   filter,
   pictureSize,
   accordion,
+  burger,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -61,4 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   pictureSize('.sizes-block');
+
+  burger({
+    menuSelector: '.burger-menu',
+    burgerSelector: '.burger',
+  });
 });
