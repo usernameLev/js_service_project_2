@@ -9,6 +9,7 @@ import {
   filter,
   pictureSize,
   accordion,
+  scrolling
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -61,4 +62,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   pictureSize('.sizes-block');
+
+  scrolling('.pageup');
 });
