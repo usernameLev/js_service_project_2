@@ -12,7 +12,7 @@
 
 <body>
 	<img class="fixed-gift wow pulse infinite" src=assets/img/gift.png alt>
-	<header class=header>
+	<header id="up" class=header>
 		<div class=container>
 			<div class="col-md-2 col-sm-3 col-xs-6">
 				<button class=burger>
@@ -36,7 +36,7 @@
 			<div class="col-md-8 hidden-sm hidden-xs">
 				<ul class=header-menu>
 					<li class="header-menu-catalog">
-						<a href="#">Картина из вашего фото</a>
+						<a href="#portfolio">Картина из вашего фото</a>
 						<ul class="burger-menu header-menu-sub">
 							<li><a href=#styles>Фотомозаика</a></li>
 							<li><a href=#styles>Шарж по фото</a></li>
@@ -44,7 +44,7 @@
 						</ul>
 					</li>
 					<li class="header-menu-catalog">
-						<a href="#">Готовые картины</a>
+						<a href="#portfolio">Готовые картины</a>
 						<ul class="burger-menu header-menu-sub">
 							<li><a href=#portfolio>Портрет</a></li>
 							<li><a href=#portfolio>Живопись</a></li>
@@ -52,14 +52,14 @@
 						</ul>
 					</li>
 					<li class="header-menu-catalog">
-						<a href="#">Идеи подарков</a>
+						<a href="#portfolio">Идеи подарков</a>
 						<ul class="burger-menu header-menu-sub">
 							<li><a href=#portfolio>Готовые картины</a></li>
 							<li><a href=#portfolio>Интерьерные постеры</a></li>
 						</ul>
 					</li>
 					<li class="header-menu-catalog">
-						<a href="#">Покупателям</a>
+						<a href="#portfolio">Покупателям</a>
 						<ul class="burger-menu header-menu-sub">
 							<li><a href=#often-questions>Срочное изготовление</a></li>
 							<li><a href=#often-questions>Доставка и оплата</a></li>
@@ -213,7 +213,7 @@
 						<div class=file_upload>
 							<button type=button>Загрузить фотографию</button>
 							<div>Файл не выбран</div>
-							<input type=file name=upload>
+							<input type=file name=upload multiple accept="image/*">
 						</div>
 						<select id=size>
 							<option value>Выберите размер картины</option>
@@ -739,6 +739,12 @@
 			</div>
 		</div>
 	</div>
+
+	<a href="#up" class="pageup">
+    <svg class="up" viewBox="0 0 26 26" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M26 0H0V26H26V0ZM4.6593 17.7519L13.1233 10.33L21.5873 17.7519L22.9059 16.2481L13.7826 8.24813L13.1233 7.67L12.464 8.24813L3.3407 16.2481L4.6593 17.7519Z" fill="black"/>
+    </svg>
+</a>
 	<script src="script.js"></script>
 </body>
 

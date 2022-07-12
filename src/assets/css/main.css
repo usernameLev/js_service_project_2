@@ -923,7 +923,7 @@ h4 {
   background-color: #f7e7e6;
   transition: all 0.3s ease-out;
   overflow: hidden;
- /*  1 solution
+  /*  1 solution
   display: none;
   margin-top: 1rem;
   padding: 3rem 4rem; */
@@ -1287,6 +1287,20 @@ h4 {
 
 .status {
   text-align: center;
+}
+
+.pageup {
+  opacity: 0;
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 1s all;
 }
 
 @media (max-width: 1399px) {
