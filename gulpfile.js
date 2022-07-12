@@ -5,6 +5,7 @@ const webpack = require('webpack-stream');
 const browsersync = require('browser-sync');
 
 const dist = "./dist/";
+// Могу скинуть в эту папку
 // const dist = "../../js-petre4enko-test-2";
 
 gulp.task('copy-html', () => {
